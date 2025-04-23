@@ -131,4 +131,5 @@ public class Turno {
                 ", estadoTurno=" + estadoTurno +
                 '}';
     }
+
 }

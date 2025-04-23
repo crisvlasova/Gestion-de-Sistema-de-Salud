@@ -6,13 +6,15 @@ public class Historial {
     private LinkedList<Turno> turnosHistorial = new LinkedList<>();
     private static Historial instancia;
 
-    public Historial(Paciente paciente, LinkedList<Turno> turnos) {
+    public Historial(Paciente paciente, LinkedList<Turno> turnosHistorial) {
         this.paciente = paciente;
-        this.turnosHistorial = turnos;
+        this.turnosHistorial = turnosHistorial;
     }
+
     private Historial() {
         turnosHistorial = new LinkedList<>();
     }
+
     // la funcion  hace que solamente haya una instancia sola de la clase, y la retorna;
     public static Historial getInstance() {
         if (instancia == null) {
@@ -23,11 +25,12 @@ public class Historial {
 
 
     //Funcion para agregar turnos al historial
-    public void agregarTurno(Turno turno){
-        JOptionPane.showMessageDialog(null,"Funcion de agregar historial");
+    public void agregarTurno(Turno turno) {
+        JOptionPane.showMessageDialog(null, "Funcion de agregar historial");
         turnosHistorial.add(turno);
 
     }
+
     public LinkedList<Turno> getPersonas() {
         return turnosHistorial;
     }
